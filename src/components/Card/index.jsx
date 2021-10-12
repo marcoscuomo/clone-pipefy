@@ -1,10 +1,62 @@
-import React from 'react';
+import React, { useRef, useContext } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
 
+import BoardContext from '../Board/context';
 import { Container, Label } from './styles';
 
-export default function Card({ data }) {
+export default function Card({ data, index, listIndex }) {
+
+  const ref = useRef();
+  const { move, lists } = useContext(BoardContext);
+
+  const [{ isDragging }, dragRef] = useDrag({
+    type: "CARD",
+    item: { type: 'CARD', id: data.id, index, listIndex },
+    collect: monitor => ({
+      isDragging: !!monitor.isDragging()
+    })
+  });
+
+  const [, dropRef] = useDrop({
+    accept: 'CARD',
+    hover(item, monitor) {
+      const draggedListIndex = item.listIndex;
+      const targetListIndex = listIndex;
+      const draggedIndex = item.index;
+      const targetIndex = index;
+
+      if(draggedIndex === targetIndex && draggedListIndex === targetListIndex) {
+        return;
+      }
+
+      // Get the element size
+      const targetSize = ref.current.getBoundingClientRect();
+      const targetCenter = (targetSize.bottom - targetSize.top) / 2;
+      
+      // Get the point where the element was dragged
+      const draggedOfSet = monitor.getClientOffset();
+      const draggedTop = draggedOfSet.y - targetSize.top;
+
+      if(draggedIndex < targetIndex && draggedTop < targetCenter) {
+        return;
+      }
+
+      if(draggedIndex > targetIndex && draggedTop > targetCenter) {
+        return;
+      }
+
+      move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
+
+      item.index = targetIndex;
+      item.listIndex = targetListIndex;
+    
+    }
+  });
+
+  dragRef(dropRef(ref));
+
   return (
-    <Container>
+    <Container ref={ref} isDragging={isDragging}>
       <header>
         {data.labels.map(label => <Label key={label} color={label} />)}
       </header>
