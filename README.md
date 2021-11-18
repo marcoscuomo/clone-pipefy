@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+# App Pipefy clone with drag and drop features
+
+![alt text](https://lh3.googleusercontent.com/BbPBuYwMBMT0e9cUB3zYKaRqpaD0WcTFXgMGtuq1q2Fv_XFZ3r8Kxp3orzn5rZ8ZdEYv6Qh_JkHCnfagOZA7wZvyNNjuTKQxf2L5I7myelRMd-S2Y7IqQKAHVhX6k-vGIRiPXaY0QXAJko4SlZKTsG414efItfK8QboR_1YKiJGkG6NBRFF3EpWoHjGoUV-jTEyhpVhTr-gkZLc14DehkdS6G1GLCEHoE7IEvO0QcfVOdjL2a-NJTkd4kGf_u4gMKsg_alo1WaGdkw5WFhUPji0YhPqFlBu-3TF9sJ75MJafg0PzD2TlmsPh372wxmuwpDTmaXOUYJWPHmvUq7X0hksPRw480LM77wLWSLOn3TRzISS9eax-PFGZRifjmGgfj9zS7kqwW4_Cjaad2Ol_PcrvPLNOMkHX9lvwM5agF7KnZoldgFuex3PYPpDWL62tagsp04YLnsegCx6afgzTWoiWvjqz-EuSAlvH4XH48MgevOyf_SIWNLFyk-5gKs9ztaWvdL3kd-wnX7vIdSsjOTW4XnHSJg9V9IPmVWhkIn-Tv8jeriRS6j-e2Bw0QLDlf1vPl1kantWzcuGEZ0qQtXCn_4P9-5P2SHaQCE2t_5BNLEBJt4JL8JgGuXoxOCQE86iCKZnrIFhv5hXp9Z4DsisBZEXjBJ9jjJRzksFV47Oux4Mbypvqi6KjtFPOeOk0Fdc1dj5WVPr8c-GGU9syfj5y=w1412-h651-no?authuser=0)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
