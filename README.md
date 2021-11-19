@@ -2,7 +2,7 @@
 
 # App Pipefy clone with drag and drop features
 
-<img src="https://i.ibb.co/jrS67WP/pipefy.png" alt="pipefy" />
+<img src="https://i.ibb.co/NyMVwmd/pipefy.png" alt="pipefy" />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
